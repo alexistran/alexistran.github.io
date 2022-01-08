@@ -255,3 +255,9 @@ link that contains should open and close the topnav (.icon) */
         margin-bottom: 50px;
     }
 }
+/*@media screen and (min-width: 1440px) {
+  .sub-wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+}*/
