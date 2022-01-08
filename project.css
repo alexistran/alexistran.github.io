@@ -233,18 +233,6 @@ footer p {
 	}
 }
 
-/* For ipad and smaller adjust wrapper size*/
-@media screen and (max-width: 768px) {
-    /*hide all links, except for the first one ("Home"). Show the 
-link that contains should open and close the topnav (.icon) */
-    /*.topnav a:nth-child(n+2):nth-child(-n+5) {
-        display: none;
-    }*/
-    .wrapper {
-        width: 85%;
-    }
-
-}
 
 /* For mobile devices, remove resume link */
 @media screen and (max-width: 480px) {
@@ -253,7 +241,10 @@ link that contains should open and close the topnav (.icon) */
     }
     .container-fluid, .row {
     padding:0px;
-  }
+    }
+    .wrapper {
+        width: 85%;
+    }
    /* body {
       padding:0;
     }*/
