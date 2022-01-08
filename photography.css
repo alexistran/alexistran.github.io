@@ -16,6 +16,10 @@ body {
     width: 70%;
     margin: 0 auto;
 }
+.sub-wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
 
 /*---------------nav---------------*/
 .topnav {
@@ -147,5 +151,12 @@ link that contains should open and close the topnav (.icon) */
     flex: 100%;
     max-width: 100%;
     /*padding: 0px;*/
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .sub-wrapper {
+    width: 60%;
+    margin: 0 auto;
   }
 }
