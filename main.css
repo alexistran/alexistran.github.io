@@ -13,9 +13,37 @@
     width: 70%;
     margin: 0 auto;
 }
-/*body {
-  font-family: 'Muli', sans-serif !important;
-}*/
+
+/* large header */
+h1 {
+    font-size: 2.375rem;
+    font-weight: 700;
+    line-height: 40px;
+    color: #424242;
+    font-family: 'Muli';
+}
+
+/* content header */
+h2 {
+    padding-top: 70px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    color: #666666;
+    font-family: 'Muli';
+    font-weight: 500;
+}
+
+/* card metadata */
+h3 {
+    font-size: 16px;
+}
+
+/* p styles*/
+p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #424242;
+}
 
 .hideme {
     opacity:0;
@@ -73,63 +101,39 @@ a:hover {
     color: #f0ad41;
 }
 
-#header a {
+#header-main a {
     color: #424242;
     border-bottom: 1px dotted #f0ad41;
 }
 
-#header a:hover {
+#header-main a:hover {
     /*text-decoration: none;*/
+    color: #f0ad41;
+}
+
+ul a{
+    color: #424242;
+    border-bottom: 1px dotted #f0ad41;
+}
+ul a:hover {
     color: #f0ad41;
 }
 
 
 /*------------------header-----------------*/
-/*header {
-    margin: 70px 0px 135px 60px;
-    text-align: left;
-}*/
-#header {
+#header-main {
     padding: 50px 0px 0px 0px;
-    /*letter-spacing: 1px;*/
+    max-width: 800px;
 }
-
-h1 {
-    font-size: 2.375rem;
-    font-weight: 900;
-    line-height: 40px;
-    /*color: #404040;*/
-    /*color: #f9bc5c;*/
-    color: #424242;
+#header-about {
+    padding: 50px 0px 0px 0px;
 }
-
-h2 {
-    padding-top: 70px;
-    font-size: 16px;
-    padding-bottom: 10px;
-    color: #666666;
-    font-family: 'Muli';
-    font-weight: 500;
-}
-h3 {
-    font-size: 16px;
-}
-
-p {
-    line-height: 30px;
-    color: #424242;
-}
-
-/*sect-info :hover {
-    font-size: 30px;
-    text-decoration: none;
-}*/
 
 /*----------------------work----------------------*/
 .card-wrapper {
     display: grid;
     grid-template-rows: repeat(1, auto);
-    grid-gap: 30px;
+    grid-gap: 50px;
 }
 .sect-card-image {
     display: flex;
@@ -137,15 +141,8 @@ p {
 }
 
 .sect-card-image img {
-    /*width: 8rem;*/
-    /*height: 5rem;*/
     margin-right: 1rem;
-    
 }
-
-/*.sect-card-img:hover {
-    transform: scale(0.95);
-}*/
 
 .card-title {
     align-items: center;
@@ -157,38 +154,18 @@ p {
     color: #424242;
 }
 
-.card-title:hover {
-    color: #f0ad41;
-}
-
 .card-metadata {
-    color: #2D2F32;
+    color: #424242;
     text-decoration: none;
     margin-top: -0.22rem;
     margin-bottom: 0;
     font-size: 16px;
 }
 
-/*.card-metadata:hover {
-    color: #ddd;
-}*/
-/*.box-color {
-    background-color: blue;
-}*/
-.button-link {
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    padding: 12px 16px;
-    border-radius: 4px;
-    background-color: #FFC400;
-    color: white;
-    width: 140px;
-    text-align: center;
-    margin-top: 5%;
-
-}
 
 
 /*----------------------footer----------------------*/
+
 footer {
     text-align: center;
     margin: 60px 0;
@@ -201,35 +178,55 @@ footer h5 {
     color: #424242;
 }
 
+/*----------------------col row----------------------*/
+
+.column {
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*----------------------lists----------------------*/
+ul {
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #424242;
+
+}
+
 /*----------------media query----------------*/
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 641px) {
-    .topnav a:nth-child(n+2):nth-child(-n+5) {
+/* For ipad and smaller adjust wrapper size*/
+@media screen and (max-width: 768px) {
+    /*hide all links, except for the first one ("Home"). Show the 
+link that contains should open and close the topnav (.icon) */
+    /*.topnav a:nth-child(n+2):nth-child(-n+5) {
         display: none;
-    }
+    }*/
     .wrapper {
         width: 85%;
     }
 
 }
 
+/* For mobile devices, remove resume link */
+@media screen and (max-width: 480px) {
+    .topnav a:nth-child(n+2):nth-child(-n+2) {
+        display: none;
+    }
+}
+
 
 @media screen and (min-width: 700px) {
-    html p, body h1, body p{
-        max-width: 700px;
-    }
-    html h1{
-        max-width: 800px;
-    }
     .sect-card-img img {
         width: 100%;
         margin-bottom: 0rem;
-        /*height: 9rem;*/
     }
-    /*.sect-card {
-        margin-bottom: 3rem;
-    }*/
 
     .card-wrapper {
         display: grid;
@@ -252,21 +249,9 @@ footer h5 {
 @media screen and (max-width: 700px) {
     .sect-card .sect-card-img img {
         width: 80%;
-        /*margin-bottom: 3rem;*/
-        /*height: 9rem;*/
     }
 
     .card-title-2 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 50px;
     }
 }
-
-
-
-/*@media screen and (max-width: 800px) {
-    header {
-        width: 96%;
-        margin: 30px auto 100px auto;
-        text-align: left;
-    }
-}*/

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+
+    Hi, I see you peeking here~ 
+    Hope you have a good day!
+
+  -->
+<html>
+<head>
+	<title>Alexis Tran</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<meta name = "description" content = "Alexis Tran, Product Designer and Software Engineer">
+	<meta property="og:site_name" content="Alexis Tran">
+	<meta property="og:description" content="Alexis Tran's portfolio">
+	<meta property = "og:type" content="portfolio">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link rel="shortcut icon" href="images/egg.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="project.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="topnav" id="myTopnav">
+		  <a href="index"><img src="images/egg.png" class="egg" height=60px width=60px></a>
+		  <a href="alexistranresume2022.pdf" target="_blank">resume</a>
+		  <a href="about">about</a>
+		  <a href="index#play">play</a>
+		  <a href="index#work">work</a>
+		</div>
+
+		<section id="header">
+		<div class="hideme">
+			<div class="container-fluid">
+				<div class="mx-auto" style="width: 100%;">
+			    	<div class="row">
+			    		<div class="col-12">
+		    				<h1>keycaps</h1>
+		    				<p>made with polymer clay</p>
+		    			</div>
+			  		</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+				<div class="mx-auto" style="width: 100%;">
+			    	<div class="row" style="padding: 20px 0px 0px 0px;">
+			    		<div class="col-lg-4 col-md-4 col-sm-12 hideme">
+					  		<center><a href="images/keycaps/1.jpg"><img src="images/keycaps/1.jpg" style="padding-bottom:30px;"></a></center>
+		    			</div>
+		    			<div class="col-lg-4 col-md-4 col-sm-12 hideme">
+					  		<center><a href="images/keycaps/2.jpg"><img src="images/keycaps/2.jpg" style="padding-bottom:30px;"></a></center>
+		    			</div>
+		    			<div class="col-lg-4 col-md-4 col-sm-12 hideme">
+					  		<center><a href="images/keycaps/3.jpg"><img src="images/keycaps/3.jpg" style="padding-bottom:30px;"></a></center>
+		    			</div>
+			  		</div>
+				</div>
+			</div>
+	</section>
+	</div>
+	
+	<footer>
+		<div class="hideme">
+			<center><a href="index"><img src="images/egg.png" class="egg" height=50px width=50px></a></center><br>
+			<h5>
+			<a href="http://linkedin.com/in/tranalexis" target="_blank"><i class="fa fa-linkedin foot"></i></a> &nbsp;
+			<a href="alexistranresume2022.pdf" target="_blank"><i class="fa fa-file-text-o foot"></i></a>
+			</h5>
+		</div>
+	</footer>
+	<script>
+		function fade_in(){
+  			$('.hideme').each( function(i){
+	            var top_of_object = $(this).position().top
+	            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+	            var bottom_of_window = $(window).scrollTop() + $(window).height();
+	            
+	            /* If the object is completely visible in the window, fade it it */
+	            if( bottom_of_window > top_of_object ){
+	                
+	                $(this).animate({'opacity':'1'},700);
+	                    
+	            }
+            
+       		 }); 
+  		}
+
+		$(document).ready(function() {
+		   fade_in();
+		   $(".sect-card").mouseenter(function(){
+		  		$(this).find(".sect-card-img").css("opacity","0.5");
+			});
+
+			$(".sect-card").mouseleave(function(){
+		 	 	$(this).find(".sect-card-img").css("opacity","1.0");
+			});
+		   
+		    /* Every time the window is scrolled ... */
+		    $(window).scroll( function(){
+		    
+		        fade_in();
+		    
+		    });
+		    
+		});
+	</script>
+
+</body>
+</html>

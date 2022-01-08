@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+
+    Hi, I see you peeking here~ 
+    Hope you have a good day!
+
+  -->
+<html>
+<head>
+	<title>Alexis Tran</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<meta name = "description" content = "Alexis Tran, Product Designer and Software Engineer">
+	<meta property="og:site_name" content="Alexis Tran">
+	<meta property="og:description" content="Alexis Tran's portfolio">
+	<meta property = "og:type" content="portfolio">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link rel="shortcut icon" href="images/egg.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="topnav" id="myTopnav">
+		  <a href="index"><img src="images/egg.png" class="egg" height=60px width=60px></a>
+		  <a href="alexistranresume2022.pdf" target="_blank">resume</a>
+		  <a href="about">about</a>
+		  <a href="index#play">play</a>
+		  <a href="index#work">work</a>
+		</div>
+		<div class="hideme">
+			<div id="header-about">
+				<h1 style="margin-left: -1px">
+					my name is alexis, and i'm happy to see you here
+				</h1><br>
+			</div>
+			<div class="row" style="margin-left: -1px">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<img src="images/breadgirl.jpg" width="90%" style="padding: 0px 0px 30px 0px;">
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<p>Interdisciplinary product designer, coder, and fun person. I'm passionate about humanizing technology and creating meaningful experiences that last beyond the screen. Previously, I studied Cognitive Science and Computer Science at UC Berkeley— learning how people and machines behave.<br><br>
+					I'm always open to opportunities to learn and grow as a designer and a human. I'm particularly interested in projects that drive social impact. <br><br>
+					Outside of design, you can find me:</p>
+					<ul>
+						<li>exploring how to create across different mediums</li>
+						<li>taking <a href="photography" target="_blank">photos</a> on my Fujifilm XT20</li>
+						<li>getting experimental with my <a href="https://www.instagram.com/alexiscaneat/" target="_blank">cooking</a></li>
+						<li>discovering new music on <a href="https://open.spotify.com/user/alexistran">Spotify</a></li>
+						<li>currently reading <a href="https://www.goodreads.com/book/show/13623848-the-song-of-achilles" target="_blank">The Song of Achilles</a></li>
+					</ul>
+
+					<!-- <p style="font-size: 20px">Outside of design, you can find me:</p>
+					<p>
+						<ul>
+							<li>exploring how to create in different mediums</li>
+							<li>taking photos on my fujifilm xt20</li>
+							<li>getting experimental with my cooking</li>
+							<li>discovering new music</li>
+							<li>currently reading</li>
+						</ul>
+					</p> -->	
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+		<div class="hideme">
+			<div id="goodbye">
+				<center>
+				<h2>let's be friends</h2>
+				<p>Let's talk about what brings you joy, collaborating, the latest shows on Netflix, or anything at all. <br><br> Feel free to reach out at <b>alexishtran@gmail.com</b></p>
+				</center>
+			</div>
+		</div>
+	</div>
+	
+	<footer>
+		<div class="hideme">
+			<center><a href="index"><img src="images/egg.png" class="egg" height=50px width=50px></a></center><br>
+			<h5>
+			<a href="http://linkedin.com/in/tranalexis" target="_blank"><i class="fa fa-linkedin foot"></i></a> &nbsp;
+			<a href="alexistranresume2022.pdf" target="_blank"><i class="fa fa-file-text-o foot"></i></a>
+			</h5>
+		</div>
+	</footer>
+	<script>
+		function fade_in(){
+  			$('.hideme').each( function(i){
+	            var top_of_object = $(this).position().top
+	            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+	            var bottom_of_window = $(window).scrollTop() + $(window).height();
+	            
+	            /* If the object is completely visible in the window, fade it it */
+	            if( bottom_of_window > top_of_object ){
+	                
+	                $(this).animate({'opacity':'1'},700);
+	                    
+	            }
+            
+       		 }); 
+  		}
+
+		$(document).ready(function() {
+		   fade_in();
+		   $(".sect-card").mouseenter(function(){
+		  		$(this).find(".sect-card-img").css("opacity","0.5");
+			});
+
+			$(".sect-card").mouseleave(function(){
+		 	 	$(this).find(".sect-card-img").css("opacity","1.0");
+			});
+		   
+		    /* Every time the window is scrolled ... */
+		    $(window).scroll( function(){
+		    
+		        fade_in();
+		    
+		    });
+		    
+		});
+	</script>
+
+</body>
+</html>
