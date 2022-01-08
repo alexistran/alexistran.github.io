@@ -15,6 +15,12 @@
 }
 
 .sub-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* modification to sub-wrapper for physical.html */
+#sub-wrapper-physical {
     width: 70%;
     margin: 0 auto;
 }
@@ -257,8 +263,12 @@ link that contains should open and close the topnav (.icon) */
 }
 
 @media screen and (min-width: 1440px) {
-  .sub-wrapper {
+    .sub-wrapper {
     width: 60%;
     margin: 0 auto;
-  }
+    }
+    #sub-wrapper-physical {
+        width: 60%;
+        margin: 0 auto;
+    }
 }
