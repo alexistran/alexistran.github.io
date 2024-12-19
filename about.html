@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+
+    hi, welcome to my home on the internet :)
+
+  -->
+<html>
+<head>
+	<title>Alexis Tran</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width", initial-scale="1.0">
+	<meta name = "description" content = "Alexis Tran, Product Designer">
+	<meta property="og:site_name" content="Alexis Tran">
+	<meta property="og:description" content="Alexis Tran's portfolio">
+	<meta property = "og:type" content="portfolio">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="shortcut icon" href="images/egg.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="topnav" id="myTopnav">
+		  <a href="index"><h1>at</h1></a>
+		  <a href="alexistranresume.pdf" target="_blank">resume</a>
+		  <a href="about">about</a>
+		  <a href="index#work">work</a>
+		</div>
+	</div>
+	
+
+	<div class="sub-wrapper">
+		<div class="hideme">
+			<div id="content">
+				<p>Hello person reading this page hoping to learn more about who I am, <br><br>
+
+				I'm an interdisciplinary product designer passionate about humanizing technology and creating meaningful experiences that last beyond the screen. Industries I've worked in include cybersecurity, retail/ecommerce, and video games (pretty versatile huh). Previously, I've studied Cognitive Science and Computer Science at UC Berkeley— learning how people and machines behave.<br><br>
+				I'm always open to opportunities to learn and grow as a designer and human being. I'm curious about all sorts of problems, but particularly interested in ones that drive social impact. <br><br>
+					Outside of design, these things bring me joy:</p>
+					<ul>
+						<li>getting experimental with my <a href="https://www.instagram.com/alexiscancook/" target="_blank">cooking</a> (my current hyperfixation is making ice cream)</li>
+						<li>discovering new music on <a href="https://open.spotify.com/user/alexistran">Spotify</a></li>
+						<li>dabbling in arts & crafts (jack of all trades, master of none haha)</li>
+						<li>learning about different cultures and food through my travels</li>
+						<li>finding fun packaging/branding at the grocery store</li>
+					</ul><br>
+
+					<p>Let's be friends~ <br>Feel free to reach out at <b>alexishtran@gmail.com</b> to discuss collaborating, what brings you joy, or anything at all.</p>
+
+					<p>Lots of love,<br> Alexis</p>
+			</div>
+		</div>
+	<script>
+		function fade_in(){
+  			$('.hideme').each( function(i){
+	            var top_of_object = $(this).position().top
+	            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+	            var bottom_of_window = $(window).scrollTop() + $(window).height();
+	            
+	            /* If the object is completely visible in the window, fade it it */
+	            if( bottom_of_window > top_of_object ){
+	                
+	                $(this).animate({'opacity':'1'},700);
+	                    
+	            }
+            
+       		 }); 
+  		}
+
+		$(document).ready(function() {
+		   fade_in();
+		   $('.sect-card').mouseenter(function(){
+		  		$(this).find('.sect-card-img').css('opacity','0.5');
+		  		// $(this).find('.card-title, .card-metadata').css('opacity', '0.5');
+			});
+
+			$('.sect-card').mouseleave(function(){
+		 	 	$(this).find('.sect-card-img').css('opacity','1.0');
+		 	 	// $(this).find('.card-title, .card-metadata').css('opacity', '1.0');
+			});
+		   
+		    /* Every time the window is scrolled ... */
+		    $(window).scroll( function(){
+		    
+		        fade_in();
+		    
+		    });
+		    
+		});
+	</script>
+
+</body>
+</html>

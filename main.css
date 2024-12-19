@@ -1,0 +1,173 @@
+
+body {
+    background-color: #D9EDEB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sub-wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+/* large header */
+h1 {
+    font-size: 2.375rem;
+    font-weight: 700;
+    line-height: auto;
+    color: #131E44;
+    font-family: 'Poppins';
+}
+
+/* content header */
+h2 {
+    font-size: 2.375rem;
+    font-weight: 500;
+    line-height: auto;
+    color: #131E44;
+    font-family: 'Poppins';
+}
+
+/* card metadata */
+h3 {
+    font-size: 16px;
+}
+
+/* p styles*/
+p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #131E44;
+}
+
+.hideme {
+    opacity:0;
+}
+
+/*---------------nav---------------*/
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a:nth-child(1) {
+    float: left;
+    display: block;
+    color: #A4A4A4;
+    text-align: center;
+    padding: 40px 0px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    /*letter-spacing: 1px;*/
+}
+
+.topnav a:nth-child(n+2):nth-child(-n+5) {
+    float: right;
+    display: block;
+    color: #131E44;
+    text-align: center;
+    padding: 50px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+
+/* Change the color of top nav links on hover */
+.topnav a:nth-child(n+2):nth-child(-n+5):hover {
+    color: #797D81;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#about a {
+    color: #424242;
+}
+
+#about a:hover {
+    /*text-decoration: none;*/
+    color: #797D81;
+}
+
+#content a {
+    color: #131E44;
+}
+
+#content a:hover {
+    color: #797D81;
+}
+
+/*------------------content-----------------*/
+#content {
+    padding: 50px 0px 100px 0px;
+    max-width: 1000px;
+}
+
+
+/*----------------------footer----------------------*/
+
+footer {
+    text-align: center;
+    margin: 60px 0;
+}
+footer h5 {
+    color: #424242;
+    font-size: 20px;
+}
+.foot {
+    color: #424242;
+}
+
+
+/*----------------------lists----------------------*/
+ul {
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #131E44;
+}
+
+/*----------------media query----------------*/
+
+/* For ipad and smaller adjust wrapper size*/
+@media screen and (max-width: 768px) {
+    /*hide all links, except for the first one ("Home"). Show the 
+link that contains should open and close the topnav (.icon) */
+    /*.topnav a:nth-child(n+2):nth-child(-n+5) {
+        display: none;
+    }*/
+    .wrapper {
+        width: 85%;
+    }
+
+}
+
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .sub-wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
